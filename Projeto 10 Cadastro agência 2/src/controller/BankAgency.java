@@ -23,6 +23,7 @@ public class BankAgency {
         if(this.clients.containsKey(clientId)){
             throw new RuntimeException("Fail: o client " + clientId + " já existe");
         }
+
         Client client = new Client(clientId);
 
         CheckingAccount cc = new CheckingAccount(clientId, "CC");
@@ -35,6 +36,8 @@ public class BankAgency {
         this.accounts.put(cp.getId(), cp);
 
         this.clients.put(clientId, client);
+
+
     }
 
     public void deposit(int idAccount, float value){

@@ -9,6 +9,7 @@ public class Client {
 
     public Client(String clientId){
         this.clientId = clientId;
+        this.accounts = new ArrayList<>();
     }
 
     public List<Account> getAccounts() {
